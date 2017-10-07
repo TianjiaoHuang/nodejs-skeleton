@@ -1,6 +1,3 @@
-var socket = io();
-var connectedPeers = {};
-var lang;
 //redirect if not logged in
 if(window.localStorage.getItem('_id') === null)
 {
@@ -72,7 +69,7 @@ $(document).ready(function () {
                   console.error(data);
                   return;
               }
-              console.log("Post request sent");
+              console.log("Post request sent. Server says: " + data);
           }
       });
 

@@ -12,7 +12,7 @@ exports.new_user = function(req, res) {
   });
 };
 
-//login
+// login
 exports.get_user = function(req, res) {
   var username = req.params.username;
   var password = req.params.password;
@@ -20,4 +20,10 @@ exports.get_user = function(req, res) {
   //if users contains username, check password
   res.send(username + ' ' + password);
 };
+
+// tweet
+exports.tweet = function(req, res) {
+  console.log(req.body.content);
+  res.send("I get your tweet\n" + req.body.content);
+}
 
